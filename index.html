@@ -13,7 +13,42 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>Shintech Power Tools</title>
+    <style>
+      /* --- Social Icon Buttons --- */
+      .product__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .product__buttons .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 22px;
+        text-decoration: none;
+        color: white;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .btn.whatsapp {
+        background-color: #25d366;
+      }
+      .btn.facebook {
+        background-color: #1877f2;
+      }
+      .btn.youtube {
+        background-color: #ff0000;
+      }
+      .product__buttons .btn:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+      }
+    </style>
   </head>
+
   <body>
     <!-- NAVIGATION -->
     <nav>
@@ -82,6 +117,7 @@
           <h2 class="section__header">About Shintech</h2>
           <p class="section__description">
             Shintech is committed to providing durable, high-performance power tools for both professional contractors and hobbyists.
+            We are importers and distributors for Dongcheng, Misun and Zogo power tools in Telangana and Andhra Pradesh.
           </p>
         </div>
         <button class="about__btn">Learn More</button>
@@ -119,109 +155,64 @@
     <section class="section__container product__container" id="product">
       <h2 class="section__header">Power Tools</h2>
       <div class="product__grid">
-        <!-- Product Cards with buttons -->
-        <div class="product__card">
+        <!-- Product Template -->
+        <div class="product__card" data-product="Cordless Drill">
           <h4>Cordless Drill</h4>
-          <p>$120.00</p>
           <img src="assets/product-1.png" alt="Cordless Drill" />
           <div class="product__buttons">
-            <a href="https://wa.me/919876543210" target="_blank" class="btn whatsapp">WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook">Facebook</a>
+            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
           </div>
         </div>
-        <div class="product__card">
+
+        <div class="product__card" data-product="Angle Grinder">
           <h4>Angle Grinder</h4>
-          <p>$90.00</p>
           <img src="assets/product-2.png" alt="Angle Grinder" />
           <div class="product__buttons">
-            <a href="https://wa.me/919876543210" target="_blank" class="btn whatsapp">WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook">Facebook</a>
+            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
           </div>
         </div>
-        <div class="product__card">
+
+        <div class="product__card" data-product="Circular Saw">
           <h4>Circular Saw</h4>
-          <p>$150.00</p>
           <img src="assets/product-3.png" alt="Circular Saw" />
           <div class="product__buttons">
-            <a href="https://wa.me/919876543210" target="_blank" class="btn whatsapp">WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook">Facebook</a>
+            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
           </div>
         </div>
-        <div class="product__card">
+
+        <div class="product__card" data-product="Hammer Drill">
           <h4>Hammer Drill</h4>
-          <p>$130.00</p>
           <img src="assets/product-4.png" alt="Hammer Drill" />
           <div class="product__buttons">
-            <a href="https://wa.me/919876543210" target="_blank" class="btn whatsapp">WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook">Facebook</a>
+            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
           </div>
         </div>
-        <div class="product__card">
+
+        <div class="product__card" data-product="Electric Sander">
           <h4>Electric Sander</h4>
-          <p>$80.00</p>
           <img src="assets/product-5.png" alt="Electric Sander" />
           <div class="product__buttons">
-            <a href="https://wa.me/919876543210" target="_blank" class="btn whatsapp">WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook">Facebook</a>
+            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
           </div>
         </div>
-        <div class="product__card">
+
+        <div class="product__card" data-product="Jigsaw">
           <h4>Jigsaw</h4>
-          <p>$75.00</p>
           <img src="assets/product-6.png" alt="Jigsaw" />
           <div class="product__buttons">
-            <a href="https://wa.me/919876543210" target="_blank" class="btn whatsapp">WhatsApp</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook">Facebook</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLIENTS -->
-    <section class="section__container client__container">
-      <div class="client__content">
-        <h2 class="section__header">What Our Clients Say</h2>
-        <p class="section__description">
-          Testimonials Highlighting Our Commitment to Quality, Performance, and Customer Satisfaction
-        </p>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="client__card">
-                <img src="assets/user-1.jpg" alt="client" />
-                <div>
-                  <p>
-                    Shintech power tools are reliable and durable. Perfect for my construction projects.
-                  </p>
-                  <h4>David Miller</h4>
-                  <h5>Contractor</h5>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="client__card">
-                <img src="assets/user-2.jpg" alt="client" />
-                <div>
-                  <p>
-                    The quality and performance are unmatched. I recommend Shintech to all my colleagues.
-                  </p>
-                  <h4>Sarah Thompson</h4>
-                  <h5>Electrician</h5>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="client__card">
-                <img src="assets/user-3.jpg" alt="client" />
-                <div>
-                  <p>
-                    Excellent tools, great support, and timely delivery. Very satisfied!
-                  </p>
-                  <h4>Michael Lee</h4>
-                  <h5>Workshop Owner</h5>
-                </div>
-              </div>
-            </div>
+            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=example.com" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
+            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
           </div>
         </div>
       </div>
@@ -263,24 +254,32 @@
             <li><a href="#">Terms</a></li>
           </ul>
         </div>
-        <div class="footer__col">
-          <h4>Support</h4>
-          <ul class="footer__links">
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Affiliates</a></li>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Cancellation Policy</a></li>
-            <li><a href="#">Security</a></li>
-          </ul>
-        </div>
       </div>
       <div class="footer__bar">
         Copyright © 2025 Shintech. All rights reserved.
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
+
+    <script>
+      // WhatsApp dynamic message script
+      document.querySelectorAll(".product__card").forEach((card) => {
+        const product = card.getAttribute("data-product");
+        const whatsappBtn = card.querySelector(".btn.whatsapp");
+
+        whatsappBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const message = encodeURIComponent(
+            `Thanks for contacting Shintech! I'm interested in the ${product}.`
+          );
+          const phone = "918977022778"; // Your WhatsApp number
+          const url = `https://wa.me/${phone}?text=${message}`;
+          window.open(url, "_blank");
+        });
+      });
+    </script>
   </body>
 </html>
