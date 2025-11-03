@@ -117,7 +117,7 @@
           <h2 class="section__header">About Shintech</h2>
           <p class="section__description">
             Shintech is committed to providing durable, high-performance power tools for both professional contractors and hobbyists.
-            We are importers and distributors for Dongcheng, Misun and Zogo power tools in Telangana and Andhra Pradesh.
+            We are importers and distributors for Dongcheng, Misun and Zogo power tools in Telangana and Andhra P
           </p>
         </div>
         <button class="about__btn">Learn More</button>
@@ -217,6 +217,7 @@
         </div>
       </div>
     </section>
+     <script src="main.js"></script>
 
     <!-- FOOTER -->
     <footer class="footer" id="contact">
@@ -259,27 +260,5 @@
         Copyright © 2025 Shintech. All rights reserved.
       </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-      // WhatsApp dynamic message script
-      document.querySelectorAll(".product__card").forEach((card) => {
-        const product = card.getAttribute("data-product");
-        const whatsappBtn = card.querySelector(".btn.whatsapp");
-
-        whatsappBtn.addEventListener("click", (e) => {
-          e.preventDefault();
-          const message = encodeURIComponent(
-            `Thanks for contacting Shintech! I'm interested in the ${product}.`
-          );
-          const phone = "918977022778"; // Your WhatsApp number
-          const url = `https://wa.me/${phone}?text=${message}`;
-          window.open(url, "_blank");
-        });
-      });
-    </script>
   </body>
 </html>
