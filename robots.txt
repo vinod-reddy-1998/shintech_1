@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Allow Google to crawl CSS, JS, images
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Block unnecessary system or admin folders (if they exist)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /tmp/
+Disallow: /private/
+
+# Your sitemap (important for indexing)
+Sitemap: https://shintech.in/sitemap.xml
