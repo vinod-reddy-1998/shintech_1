@@ -4,14 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO Meta Tags for "poweraction" and related keywords -->
-    <meta name="description" content="Discover high-quality power action tools at Shintech.in. Explore durable industrial power tools, drills, grinders, and more for professionals and DIY enthusiasts. Shop now for reliable performance." />
-    <meta name="keywords" content="power action tools, poweraction tools, industrial power tools, cordless drills, angle grinders, circular saws, hammer drills, electric sanders, jigsaws, Shintech power tools" />
+    <meta
+      name="description"
+      content="Discover high-quality power action tools at Shintech.in. Explore durable industrial power tools, drills, grinders, and more for professionals and DIY enthusiasts. Shop now for reliable performance."
+    />
+    <meta
+      name="keywords"
+      content="power action tools, poweraction tools, industrial power tools, cordless drills, angle grinders, circular saws, hammer drills, electric sanders, jigsaws, Shintech power tools"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Shintech" />
     <!-- Open Graph for social sharing (helps with SEO indirectly) -->
-    <meta property="og:title" content="Power Action Tools | High-Quality Industrial Equipment | Shintech.in" />
-    <meta property="og:description" content="Shop power action tools at Shintech.in. Reliable, durable tools for every job, inspired by top brands like Dongcheng, Misun, and Zogo." />
-    <meta property="og:image" content="https://shintech.in/assets/header.jpg" />
+    <meta
+      property="og:title"
+      content="Power Action Tools | High-Quality Industrial Equipment | Shintech.in"
+    />
+    <meta
+      property="og:description"
+      content="Shop power action tools at Shintech.in. Reliable, durable tools for every job, inspired by top brands like Dongcheng, Misun, and Zogo."
+    />
+    <meta
+      property="og:image"
+      content="https://shintech.in/assets/header.jpg"
+    />
     <meta property="og:url" content="https://shintech.in" />
     <meta property="og:type" content="website" />
     <!-- Canonical URL to avoid duplicate content issues -->
@@ -25,26 +40,63 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Power Action Tools | High-Quality Industrial Equipment | Shintech.in</title>
+    <title>
+      Power Action Tools | High-Quality Industrial Equipment | Shintech.in
+    </title>
+
     <style>
+      :root {
+        --primary: #0052cc;
+        --primary-soft: #e7f0ff;
+        --text-main: #222;
+        --text-muted: #555;
+        --bg-light: #f7f7f9;
+        --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        --radius-lg: 14px;
+        --radius-md: 10px;
+        --transition-fast: 0.25s ease;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: var(--text-main);
+        background: #fff;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
       /* --- Social Icon Buttons --- */
       .product__buttons {
         display: flex;
         justify-content: center;
         gap: 10px;
-        margin-top: 10px;
+        margin: 6px 0 2px;
       }
       .product__buttons .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
-        font-size: 22px;
+        font-size: 20px;
         text-decoration: none;
         color: white;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        transition: transform var(--transition-fast),
+          opacity var(--transition-fast), box-shadow var(--transition-fast);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
       }
       .btn.whatsapp {
         background-color: #25d366;
@@ -56,21 +108,190 @@
         background-color: #ff0000;
       }
       .product__buttons .btn:hover {
-        transform: scale(1.1);
-        opacity: 0.9;
+        transform: translateY(-2px) scale(1.03);
+        opacity: 0.95;
       }
+
       /* New style for poweraction section */
       .poweraction__section {
-        background-color: #f4f4f4;
-        padding: 20px;
+        background: linear-gradient(to right, #f4f7ff, #fdfdff);
+        padding: 30px 20px;
         text-align: center;
-        margin: 20px 0;
+        margin: 20px 0 10px;
+        border-radius: var(--radius-lg);
+        max-width: 1100px;
+        margin-inline: auto;
       }
       .poweraction__section h3 {
-        color: #333;
+        color: var(--text-main);
+        margin-bottom: 8px;
       }
       .poweraction__section p {
-        color: #666;
+        color: var(--text-muted);
+        max-width: 720px;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+      .poweraction__section a {
+        color: var(--primary);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      /* Category section */
+      .category__section {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        padding: 30px 16px 40px;
+        background: var(--bg-light);
+      }
+
+      .section__header {
+        text-align: center;
+        margin: 0 0 10px;
+      }
+
+      .category__title {
+        margin: 24px 0 12px;
+        text-align: center;
+        font-size: 1.4rem;
+      }
+
+      /* Make all category images aligned & clean */
+      .category__section .product__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        max-width: 1100px;
+        margin-inline: auto;
+      }
+
+      .category__section .product__card {
+        text-align: center;
+        padding: 0.75rem;
+        background: #fff;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--card-shadow);
+        transition: transform var(--transition-fast),
+          box-shadow var(--transition-fast), background var(--transition-fast);
+      }
+
+      .category__section .product__card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+        background: #ffffff;
+      }
+
+      .category__section .product__card h4 {
+        margin: 4px 0 8px;
+        font-size: 1rem;
+      }
+
+      .category__section .product__card img {
+        width: 100%;
+        max-height: 200px;
+        aspect-ratio: 4 / 3;
+        object-fit: contain;
+        border-radius: var(--radius-md);
+        background: #fff;
+        display: block;
+        margin: 0 auto 8px;
+        cursor: pointer;
+      }
+
+      .product__desc {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-top: 4px;
+        line-height: 1.4;
+      }
+
+      /* Image Modal (click to enlarge) */
+      .image-modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+
+      .image-modal--active {
+        display: flex;
+      }
+
+      .image-modal__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .image-modal__content {
+        position: relative;
+        background: #fff;
+        padding: 1rem;
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: var(--radius-lg);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        z-index: 1;
+      }
+
+      #imageModalMain {
+        max-width: 80vw;
+        max-height: 60vh;
+        object-fit: contain;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+
+      .image-modal__thumbs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+      }
+
+      .image-modal__thumbs img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: border-color var(--transition-fast), transform 0.15s ease;
+      }
+
+      .image-modal__thumbs img:hover {
+        transform: translateY(-1px);
+      }
+
+      .image-modal__thumbs img.active {
+        border-color: var(--primary);
+      }
+
+      .image-modal__close {
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        background: transparent;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        line-height: 1;
+      }
+
+      @media (max-width: 600px) {
+        .image-modal__content {
+          max-width: 95vw;
+          padding: 0.75rem;
+        }
+        #imageModalMain {
+          max-height: 50vh;
+        }
       }
     </style>
   </head>
@@ -89,11 +310,11 @@
       <ul class="nav__links" id="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#product">Power Action Tools</a></li> <!-- Updated for keyword -->
+        <li><a href="#categories">Power Tools</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav__search" id="nav-search">
-        <input type="text" placeholder="Search power action tools" /> <!-- Added keyword -->
+        <input type="text" placeholder="Search power action tools" />
         <span><i class="ri-search-2-line"></i></span>
       </div>
     </nav>
@@ -105,9 +326,11 @@
       </div>
       <div class="header__content">
         <div>
-          <h1>High-Quality Power Action Tools for Every Job</h1> <!-- Added "Action" for keyword -->
+          <h1>High-Quality Power Action Tools for Every Job</h1>
           <p>
-            Shintech provides reliable and durable power action tools designed for professionals and DIY enthusiasts alike. Explore our range of industrial power tools inspired by top brands.
+            Shintech provides reliable and durable power action tools designed
+            for professionals and DIY enthusiasts alike. Explore our range of
+            industrial power tools inspired by top brands.
           </p>
         </div>
       </div>
@@ -116,7 +339,7 @@
     <!-- DEALS -->
     <section class="section__container deals__container">
       <div class="deals__card">
-        <h2 class="section__header">Hot 🔥 Deals on Power Action Tools</h2> <!-- Added keyword -->
+        <h2 class="section__header">Hot 🔥 Deals on Power Action Tools</h2>
         <p>Shop directly and save big on top-quality power action tools</p>
       </div>
       <div class="deals__card">
@@ -127,7 +350,10 @@
       <div class="deals__card">
         <span><i class="ri-calendar-schedule-line"></i></span>
         <h4>30-Day Terms</h4>
-        <p>Flexible payment options to make your power action tool purchase stress-free.</p>
+        <p>
+          Flexible payment options to make your power action tool purchase
+          stress-free.
+        </p>
       </div>
       <div class="deals__card">
         <span><i class="ri-money-rupee-circle-line"></i></span>
@@ -140,117 +366,852 @@
     <section class="section__container about__container" id="about">
       <div class="about__header">
         <div>
-          <h2 class="section__header">About Shintech Power Action Tools</h2> <!-- Added keyword -->
+          <h2 class="section__header">About Shintech Power Action Tools</h2>
           <p class="section__description">
-            Shintech is committed to providing durable, high-performance power action tools for both professional contractors and hobbyists.
-            We are importers and distributors for Dongcheng, Misun and Zogo power action tools in Telangana and Andhra Pradesh. Discover tools that combine power and precision for efficient action on any project.
+            Shintech is committed to providing durable, high-performance power
+            action tools for both professional contractors and hobbyists. We are
+            importers and distributors for Dongcheng, Misun and Zogo power
+            action tools in Telangana and Andhra Pradesh. Discover tools that
+            combine power and precision for efficient action on any project.
           </p>
         </div>
         <button class="about__btn">Learn More</button>
       </div>
       <div class="about__content">
         <div class="about__image">
-          <img src="assets/about.png" alt="About Shintech Power Action Tools" />
+          <img
+            src="assets/about.png"
+            alt="About Shintech Power Action Tools"
+          />
         </div>
         <div class="about__grid">
           <div class="about__card">
             <h3>1.</h3>
             <h4>Who We Are</h4>
-            <p>A trusted manufacturer and supplier of power action tools with decades of expertise.</p>
+            <p>
+              A trusted manufacturer and supplier of power action tools with
+              decades of expertise.
+            </p>
           </div>
           <div class="about__card">
             <h3>2.</h3>
             <h4>What We Do</h4>
-            <p>Provide high-quality power action tools like drills, grinders, saws, and other tools for every type of project.</p>
+            <p>
+              Provide high-quality power action tools like drills, grinders,
+              saws, and other tools for every type of project.
+            </p>
           </div>
           <div class="about__card">
             <h3>3.</h3>
             <h4>How We Help</h4>
-            <p>Offer reliable power action tools, expert guidance, and customer support to make every job easier.</p>
+            <p>
+              Offer reliable power action tools, expert guidance, and customer
+              support to make every job easier.
+            </p>
           </div>
           <div class="about__card">
             <h3>4.</h3>
             <h4>Our Mission</h4>
-            <p>To empower professionals and DIY enthusiasts with power action tools that last and perform.</p>
+            <p>
+              To empower professionals and DIY enthusiasts with power action
+              tools that last and perform.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- POWER ACTION SECTION (Inspired by poweractiontools.com - Ethical Integration) -->
-    <!-- Note: This is a new section to tie in "poweraction" without copying. If you want to link to poweractiontools.com, add a link here ethically. -->
+    <!-- POWER ACTION SECTION -->
     <section class="poweraction__section">
       <h3>Explore Power Action Tools</h3>
-      <p>At Shintech, we specialize in power action tools that deliver exceptional performance for industrial and home use. Inspired by leading tools in the market, our products ensure efficiency and durability. For more inspiration, check out similar resources at <a href="https://poweractiontools.com/" target="_blank" rel="noopener">poweractiontools.com</a>.</p>
+      <p>
+        At Shintech, we specialize in power action tools that deliver exceptional
+        performance for industrial and home use. Inspired by leading tools in
+        the market, our products ensure efficiency and durability. For more
+        inspiration, check out similar resources at
+        <a
+          href="https://poweractiontools.com/"
+          target="_blank"
+          rel="noopener"
+          >poweractiontools.com</a
+        >.
+      </p>
     </section>
 
-    <!-- PRODUCTS -->
-    <section class="section__container product__container" id="product">
-      <h2 class="section__header">Power Action Tools</h2> <!-- Updated for keyword -->
+    <!-- NEW SECTION: SEPARATE CATEGORY OF IMAGES FOR POWER TOOLS & WOOD CUTTING TOOLS -->
+    <section class="section__container category__section" id="categories">
+      <h2 class="section__header">Power Tool Images</h2>
+
+      <!-- Power Tools Category -->
+      <h3 class="category__title">Power Tools</h3>
       <div class="product__grid">
-        <!-- Product Template -->
-        <div class="product__card" data-product="Cordless Drill">
-          <h4>Cordless Drill - Power Action Tool</h4> <!-- Added keyword -->
-          <img src="assets/product-1.png" alt="Cordless Drill Power Action Tool" />
+        <div class="product__card">
+          <h4>Cordless Drill (Power Tool)</h4>
+          <img
+            class="tool-image"
+            src="assets/product-1.png"
+            alt="Cordless Drill Power Tool"
+            data-images="assets/product-1.png,assets/product-1-side.jpeg,assets/product-1-back.jpeg"
+          />
           <div class="product__buttons">
-            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
-            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Cordless%20Drill"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
           </div>
+          <p class="product__desc">
+            Compact cordless drill for general drilling and fastening
+            applications.
+          </p>
         </div>
 
-        <div class="product__card" data-product="Angle Grinder">
-          <h4>Angle Grinder - Power Action Tool</h4>
-          <img src="assets/product-2.png" alt="Angle Grinder Power Action Tool" />
+        <div class="product__card">
+          <h4>Angle Grinder (Power Tool)</h4>
+          <img
+            class="tool-image"
+            src="assets/product-2.png"
+            alt="Angle Grinder Power Tool"
+            data-images="assets/product-2.png"
+          />
           <div class="product__buttons">
-            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
-            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Angle%20Grinder"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
           </div>
+          <p class="product__desc">
+            High-speed angle grinder suitable for cutting and grinding metal and
+            wood.
+          </p>
         </div>
 
-        <div class="product__card" data-product="Circular Saw">
-          <h4>Circular Saw - Power Action Tool</h4>
-          <img src="assets/product-3.png" alt="Circular Saw Power Action Tool" />
+        <div class="product__card">
+          <h4>Hammer Drill (Power Tool)</h4>
+          <img
+            class="tool-image"
+            src="assets/product-4.png"
+            alt="Hammer Drill Power Tool"
+            data-images="assets/product-4.png"
+          />
           <div class="product__buttons">
-            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
-            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Hammer%20Drill"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
           </div>
+          <p class="product__desc">
+            Heavy-duty hammer drill ideal for drilling into concrete, brick, and
+            masonry.
+          </p>
         </div>
 
-        <div class="product__card" data-product="Hammer Drill">
-          <h4>Hammer Drill - Power Action Tool</h4>
-          <img src="assets/product-4.png" alt="Hammer Drill Power Action Tool" />
+        <div class="product__card">
+          <h4>Electric Sander (Power Tool)</h4>
+          <img
+            class="tool-image"
+            src="assets/product-5.png"
+            alt="Electric Sander Power Tool"
+            data-images="assets/product-5.png"
+          />
           <div class="product__buttons">
-            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
-            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Electric%20Sander"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
           </div>
+          <p class="product__desc">
+            Electric sander for smooth finishing of wood, doors, and furniture.
+          </p>
         </div>
 
-        <div class="product__card" data-product="Electric Sander">
-          <h4>Electric Sander - Power Action Tool</h4>
-          <img src="assets/product-5.png" alt="Electric Sander Power Action Tool" />
+        <div class="product__card">
+          <h4>Jigsaw (Wood Cutting Tool)</h4>
+          <img
+            class="tool-image"
+            src="assets/product-6.png"
+            alt="Jigsaw wood cutting tool"
+            data-images="assets/product-6.png"
+          />
           <div class="product__buttons">
-            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
-            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Jigsaw"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
           </div>
+          <p class="product__desc">
+            Jigsaw for curved and straight cuts in wood, laminates, and board
+            materials.
+          </p>
+        </div>
+      </div>
+
+      <!-- Wood Cutting Tools Category -->
+      <h3 class="category__title">Wood Cutting Tools</h3>
+      <div class="product__grid">
+        <!-- Discs as separate images -->
+        <div class="product__card">
+          <h4>Wood Cutting Disc – Type 1</h4>
+          <img
+            class="tool-image"
+            src="assets/disc-1.jpeg"
+            alt="Wood cutting disc type 1"
+            data-images="assets/disc-1.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Cutting%20Disc%20Type%201"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Carbide-tipped disc suitable for fast cutting of soft wood and
+            plywood.
+          </p>
         </div>
 
-        <div class="product__card" data-product="Jigsaw">
-          <h4>Jigsaw - Power Action Tool</h4>
-          <img src="assets/product-6.png" alt="Jigsaw Power Action Tool" />
+        <div class="product__card">
+          <h4>Wood Cutting Disc – Type 2</h4>
+          <img
+            class="tool-image"
+            src="assets/disc-2.jpeg"
+            alt="Wood cutting disc type 2"
+            data-images="assets/disc-2.jpeg"
+          />
           <div class="product__buttons">
-            <a href="#" class="btn whatsapp"><i class="ri-whatsapp-fill"></i></a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in" target="_blank" class="btn facebook"><i class="ri-facebook-circle-fill"></i></a>
-            <a href="https://www.youtube.com/@shintech" target="_blank" class="btn youtube"><i class="ri-youtube-fill"></i></a>
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Cutting%20Disc%20Type%202"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
           </div>
+          <p class="product__desc">
+            Fine-tooth disc designed for smoother cuts and reduced splintering.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Cutting Disc – Type 3</h4>
+          <img
+            class="tool-image"
+            src="assets/disc-3.jpeg"
+            alt="Wood cutting disc type 3"
+            data-images="assets/disc-3.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Cutting%20Disc%20Type%203"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Multi-purpose cutting disc suitable for both wood and light board
+            materials.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Cutting Disc – Type 4</h4>
+          <img
+            class="tool-image"
+            src="assets/disc-4.jpeg"
+            alt="Wood cutting disc type 4"
+            data-images="assets/disc-4.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Cutting%20Disc%20Type%204"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Aggressive tooth profile for quick ripping and demolition-style
+            cuts.
+          </p>
+        </div>
+
+        <!-- Drill bits as separate images -->
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 1</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-1.1.jpeg"
+            alt="Wood drill bit model 1"
+            data-images="assets/bit-1.1.jpeg,assets/bit-1.2.jpeg,assets/bit-1.3.jpeg,assets/bit-1.4.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%201"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Flat wood drill bit for clean, shallow holes in softwood panels.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 2</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-2.1.jpeg"
+            alt="Wood drill bit model 2"
+            data-images="assets/bit-2.1.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%202"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Precision wood bit suitable for furniture, cabinets, and door work.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 3</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-3.jpeg"
+            alt="Wood drill bit model 3"
+            data-images="assets/bit-3.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%203"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Heavy-duty bit designed for deeper drilling in hardwood sections.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 4</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-4.jpeg"
+            alt="Wood drill bit model 4"
+            data-images="assets/bit-4.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%204"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Ideal for frame, partition, and structural wood drilling tasks.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 5</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-5.jpeg"
+            alt="Wood drill bit model 5"
+            data-images="assets/bit-5.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%205"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            General-purpose wood bit for DIY and repair applications.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 6</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-6.jpeg"
+            alt="Wood drill bit model 6"
+            data-images="assets/bit-6.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%206"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Designed for accurate drilling in laminated boards and MDF.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 7</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-7.jpeg"
+            alt="Wood drill bit model 7"
+            data-images="assets/bit-7.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%207"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Suitable for installing hardware, hinges, and fasteners in wood.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 8</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-8.jpeg"
+            alt="Wood drill bit model 8"
+            data-images="assets/bit-8.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%208"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Fine tip for small-diameter holes in trims and decorative work.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 9</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-9.jpeg"
+            alt="Wood drill bit model 9"
+            data-images="assets/bit-9.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%209"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Robust bit for repetitive drilling jobs on site and in workshops.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bit – Model 10</h4>
+          <img
+            class="tool-image"
+            src="assets/bit-10.jpeg"
+            alt="Wood drill bit model 10"
+            data-images="assets/bit-10.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%2010"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Versatile wood bit compatible with most standard power drills.
+          </p>
+        </div>
+
+        <div class="product__card">
+          <h4>Wood Drill Bearing</h4>
+          <img
+            class="tool-image"
+            src="assets/bearing.jpeg"
+            alt="Wood drill bearing"
+            data-images="assets/bearing.jpeg"
+          />
+          <div class="product__buttons">
+            <a
+              href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Wood%20Drill%20Bearing"
+              target="_blank"
+              class="btn whatsapp"
+              ><i class="ri-whatsapp-fill"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://shintech.in"
+              target="_blank"
+              class="btn facebook"
+              ><i class="ri-facebook-circle-fill"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@shintech"
+              target="_blank"
+              class="btn youtube"
+              ><i class="ri-youtube-fill"></i
+            ></a>
+          </div>
+          <p class="product__desc">
+            Durable bearing to support smooth drill rotation and longer tool
+            life.
+          </p>
         </div>
       </div>
     </section>
-     <script src="main.js"></script>
+
+    <!-- IMAGE MODAL -->
+    <div class="image-modal" id="imageModal">
+      <div class="image-modal__overlay"></div>
+      <div class="image-modal__content">
+        <button class="image-modal__close" id="imageModalClose">&times;</button>
+        <img id="imageModalMain" src="" alt="Tool large view" />
+        <div class="image-modal__thumbs" id="imageModalThumbs"></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+      (function () {
+        const modal = document.getElementById("imageModal");
+        const modalMain = document.getElementById("imageModalMain");
+        const modalThumbs = document.getElementById("imageModalThumbs");
+        const modalClose = document.getElementById("imageModalClose");
+        const overlay = modal.querySelector(".image-modal__overlay");
+
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function openModal(images, index) {
+          currentImages = images;
+          currentIndex = index || 0;
+          renderMainImage();
+          renderThumbs();
+          modal.classList.add("image-modal--active");
+        }
+
+        function closeModal() {
+          modal.classList.remove("image-modal--active");
+          currentImages = [];
+          currentIndex = 0;
+          modalMain.src = "";
+          modalThumbs.innerHTML = "";
+        }
+
+        function renderMainImage() {
+          if (!currentImages.length) return;
+          modalMain.src = currentImages[currentIndex];
+        }
+
+        function renderThumbs() {
+          modalThumbs.innerHTML = "";
+          if (currentImages.length <= 1) return;
+
+          currentImages.forEach((src, idx) => {
+            const img = document.createElement("img");
+            img.src = src;
+            if (idx === currentIndex) img.classList.add("active");
+            img.addEventListener("click", () => {
+              currentIndex = idx;
+              renderMainImage();
+              renderThumbs();
+            });
+            modalThumbs.appendChild(img);
+          });
+        }
+
+        // Attach click handlers to all tool images
+        document.querySelectorAll(".tool-image").forEach((imgEl) => {
+          imgEl.addEventListener("click", () => {
+            const data = imgEl.getAttribute("data-images");
+            let images = [];
+
+            if (data) {
+              images = data
+                .split(",")
+                .map((s) => s.trim())
+                .filter((s) => s.length > 0);
+            }
+
+            if (!images.length) {
+              images = [imgEl.src];
+            }
+
+            openModal(images, 0);
+          });
+        });
+
+        // Close events
+        modalClose.addEventListener("click", closeModal);
+        overlay.addEventListener("click", closeModal);
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            closeModal();
+          }
+        });
+      })();
+    </script>
 
     <!-- FOOTER -->
     <footer class="footer" id="contact">
@@ -259,12 +1220,23 @@
           <div class="footer__logo">
             <a href="#" class="logo">Shintech</a>
           </div>
-          <p>Quality power action tools designed for performance, reliability, and safety.</p>
+          <p>
+            Quality power action tools designed for performance, reliability,
+            and safety.
+          </p>
           <ul class="footer__socials">
-            <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-            <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
-            <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
-            <li><a href="#"><i class="ri-pinterest-fill"></i></a></li>
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-pinterest-fill"></i></a>
+            </li>
           </ul>
         </div>
         <div class="footer__col">
