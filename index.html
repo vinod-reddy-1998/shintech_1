@@ -47,7 +47,6 @@
     <style>
       :root {
         --primary: #0052cc;
-        --primary-soft: #e7f0ff;
         --text-main: #222;
         --text-muted: #555;
         --bg-light: #f7f7f9;
@@ -75,52 +74,65 @@
 
       img {
         max-width: 100%;
+        height: auto;
       }
 
-      /* --- Social Icon Buttons --- */
+      /* --- Social Icon Buttons (transparent style) --- */
       .product__buttons {
         display: flex;
         justify-content: center;
         gap: 10px;
-        margin: 6px 0 2px;
+        margin: 8px 0 2px;
       }
+
       .product__buttons .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
         border-radius: 50%;
-        font-size: 20px;
+        font-size: 18px;
         text-decoration: none;
         color: white;
-        transition: transform var(--transition-fast),
-          opacity var(--transition-fast), box-shadow var(--transition-fast);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-      }
-      .btn.whatsapp {
-        background-color: #25d366;
-      }
-      .btn.facebook {
-        background-color: #1877f2;
-      }
-      .btn.youtube {
-        background-color: #ff0000;
-      }
-      .product__buttons .btn:hover {
-        transform: translateY(-2px) scale(1.03);
-        opacity: 0.95;
+        border: 1px solid transparent;
+        background: transparent; /* transparent circle */
+        box-shadow: none;
+        opacity: 0.9;
+        transition:
+          transform var(--transition-fast),
+          opacity var(--transition-fast),
+          background-color var(--transition-fast),
+          border-color var(--transition-fast);
       }
 
-      /* New style for poweraction section */
+      .btn.whatsapp {
+        color: #25d366;
+        border-color: rgba(37, 211, 102, 0.5);
+      }
+      .btn.facebook {
+        color: #1877f2;
+        border-color: rgba(24, 119, 242, 0.5);
+      }
+      .btn.youtube {
+        color: #ff0000;
+        border-color: rgba(255, 0, 0, 0.5);
+      }
+
+      .product__buttons .btn:hover {
+        transform: translateY(-1px) scale(1.03);
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      /* POWER ACTION SECTION */
       .poweraction__section {
         background: linear-gradient(to right, #f4f7ff, #fdfdff);
         padding: 30px 20px;
         text-align: center;
-        margin: 20px 0 10px;
+        margin: 20px auto 10px;
         border-radius: var(--radius-lg);
         max-width: 1100px;
-        margin-inline: auto;
       }
       .poweraction__section h3 {
         color: var(--text-main);
@@ -138,7 +150,7 @@
         text-decoration: none;
       }
 
-      /* Category section */
+      /* CATEGORY SECTION */
       .category__section {
         margin-top: 30px;
         margin-bottom: 40px;
@@ -157,7 +169,6 @@
         font-size: 1.4rem;
       }
 
-      /* Make all category images aligned & clean */
       .category__section .product__grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -172,8 +183,10 @@
         background: #fff;
         border-radius: var(--radius-lg);
         box-shadow: var(--card-shadow);
-        transition: transform var(--transition-fast),
-          box-shadow var(--transition-fast), background var(--transition-fast);
+        transition:
+          transform var(--transition-fast),
+          box-shadow var(--transition-fast),
+          background var(--transition-fast);
       }
 
       .category__section .product__card:hover {
@@ -206,7 +219,7 @@
         line-height: 1.4;
       }
 
-      /* Image Modal (click to enlarge) */
+      /* IMAGE MODAL (click to enlarge) */
       .image-modal {
         position: fixed;
         inset: 0;
@@ -284,13 +297,61 @@
         line-height: 1;
       }
 
-      @media (max-width: 600px) {
-        .image-modal__content {
-          max-width: 95vw;
-          padding: 0.75rem;
+      /* --- BASIC MOBILE RESPONSIVE TWEAKS --- */
+      @media (max-width: 768px) {
+        nav {
+          padding: 0 12px;
         }
-        #imageModalMain {
-          max-height: 50vh;
+
+        .nav__links {
+          gap: 0.5rem;
+          font-size: 0.85rem;
+          flex-wrap: wrap;
+        }
+
+        .section__container {
+          padding-inline: 12px !important;
+        }
+
+        .header__container {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+
+        .header__image img {
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        .category__section {
+          padding-inline: 10px;
+        }
+
+        .category__section .product__grid {
+          grid-template-columns: 1fr; /* single column on mobile */
+        }
+
+        .category__section .product__card {
+          max-width: 420px;
+          margin-inline: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .category__section {
+          padding-inline: 8px;
+        }
+
+        .product__desc {
+          font-size: 0.8rem;
+        }
+
+        .product__buttons .btn {
+          width: 32px;
+          height: 32px;
+          font-size: 17px;
         }
       }
     </style>
@@ -438,7 +499,7 @@
       </p>
     </section>
 
-    <!-- NEW SECTION: SEPARATE CATEGORY OF IMAGES FOR POWER TOOLS & WOOD CUTTING TOOLS -->
+    <!-- CATEGORIES: POWER TOOLS + WOOD CUTTING TOOLS -->
     <section class="section__container category__section" id="categories">
       <h2 class="section__header">Power Tool Images</h2>
 
@@ -453,6 +514,10 @@
             alt="Cordless Drill Power Tool"
             data-images="assets/product-1.png,assets/product-1-side.jpeg,assets/product-1-back.jpeg"
           />
+          <p class="product__desc">
+            Compact cordless drill for general drilling and fastening
+            applications.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Cordless%20Drill"
@@ -473,10 +538,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Compact cordless drill for general drilling and fastening
-            applications.
-          </p>
         </div>
 
         <div class="product__card">
@@ -487,6 +548,10 @@
             alt="Angle Grinder Power Tool"
             data-images="assets/product-2.png"
           />
+          <p class="product__desc">
+            High-speed angle grinder suitable for cutting and grinding metal and
+            wood.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Angle%20Grinder"
@@ -507,10 +572,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            High-speed angle grinder suitable for cutting and grinding metal and
-            wood.
-          </p>
         </div>
 
         <div class="product__card">
@@ -521,6 +582,10 @@
             alt="Hammer Drill Power Tool"
             data-images="assets/product-4.png"
           />
+          <p class="product__desc">
+            Heavy-duty hammer drill ideal for drilling into concrete, brick, and
+            masonry.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Hammer%20Drill"
@@ -541,10 +606,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Heavy-duty hammer drill ideal for drilling into concrete, brick, and
-            masonry.
-          </p>
         </div>
 
         <div class="product__card">
@@ -555,6 +616,9 @@
             alt="Electric Sander Power Tool"
             data-images="assets/product-5.png"
           />
+          <p class="product__desc">
+            Electric sander for smooth finishing of wood, doors, and furniture.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Electric%20Sander"
@@ -575,9 +639,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Electric sander for smooth finishing of wood, doors, and furniture.
-          </p>
         </div>
 
         <div class="product__card">
@@ -588,6 +649,10 @@
             alt="Jigsaw wood cutting tool"
             data-images="assets/product-6.png"
           />
+          <p class="product__desc">
+            Jigsaw for curved and straight cuts in wood, laminates, and board
+            materials.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Jigsaw"
@@ -608,10 +673,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Jigsaw for curved and straight cuts in wood, laminates, and board
-            materials.
-          </p>
         </div>
       </div>
 
@@ -627,6 +688,10 @@
             alt="Wood cutting disc type 1"
             data-images="assets/disc-1.jpeg"
           />
+          <p class="product__desc">
+            Carbide-tipped disc suitable for fast cutting of soft wood and
+            plywood.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Cutting%20Disc%20Type%201"
@@ -647,10 +712,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Carbide-tipped disc suitable for fast cutting of soft wood and
-            plywood.
-          </p>
         </div>
 
         <div class="product__card">
@@ -661,6 +722,9 @@
             alt="Wood cutting disc type 2"
             data-images="assets/disc-2.jpeg"
           />
+          <p class="product__desc">
+            Fine-tooth disc designed for smoother cuts and reduced splintering.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Cutting%20Disc%20Type%202"
@@ -681,9 +745,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Fine-tooth disc designed for smoother cuts and reduced splintering.
-          </p>
         </div>
 
         <div class="product__card">
@@ -694,6 +755,10 @@
             alt="Wood cutting disc type 3"
             data-images="assets/disc-3.jpeg"
           />
+          <p class="product__desc">
+            Multi-purpose cutting disc suitable for both wood and light board
+            materials.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Cutting%20Disc%20Type%203"
@@ -714,10 +779,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Multi-purpose cutting disc suitable for both wood and light board
-            materials.
-          </p>
         </div>
 
         <div class="product__card">
@@ -728,6 +789,10 @@
             alt="Wood cutting disc type 4"
             data-images="assets/disc-4.jpeg"
           />
+          <p class="product__desc">
+            Aggressive tooth profile for quick ripping and demolition-style
+            cuts.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Cutting%20Disc%20Type%204"
@@ -748,10 +813,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Aggressive tooth profile for quick ripping and demolition-style
-            cuts.
-          </p>
         </div>
 
         <!-- Drill bits as separate images -->
@@ -763,6 +824,9 @@
             alt="Wood drill bit model 1"
             data-images="assets/bit-1.1.jpeg,assets/bit-1.2.jpeg,assets/bit-1.3.jpeg,assets/bit-1.4.jpeg"
           />
+          <p class="product__desc">
+            Flat wood drill bit for clean, shallow holes in softwood panels.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%201"
@@ -783,9 +847,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Flat wood drill bit for clean, shallow holes in softwood panels.
-          </p>
         </div>
 
         <div class="product__card">
@@ -796,6 +857,9 @@
             alt="Wood drill bit model 2"
             data-images="assets/bit-2.1.jpeg"
           />
+          <p class="product__desc">
+            Precision wood bit suitable for furniture, cabinets, and door work.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%202"
@@ -816,9 +880,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Precision wood bit suitable for furniture, cabinets, and door work.
-          </p>
         </div>
 
         <div class="product__card">
@@ -829,6 +890,9 @@
             alt="Wood drill bit model 3"
             data-images="assets/bit-3.jpeg"
           />
+          <p class="product__desc">
+            Heavy-duty bit designed for deeper drilling in hardwood sections.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%203"
@@ -849,9 +913,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Heavy-duty bit designed for deeper drilling in hardwood sections.
-          </p>
         </div>
 
         <div class="product__card">
@@ -862,6 +923,9 @@
             alt="Wood drill bit model 4"
             data-images="assets/bit-4.jpeg"
           />
+          <p class="product__desc">
+            Ideal for frame, partition, and structural wood drilling tasks.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%204"
@@ -882,9 +946,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Ideal for frame, partition, and structural wood drilling tasks.
-          </p>
         </div>
 
         <div class="product__card">
@@ -895,6 +956,9 @@
             alt="Wood drill bit model 5"
             data-images="assets/bit-5.jpeg"
           />
+          <p class="product__desc">
+            General-purpose wood bit for DIY and repair applications.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%205"
@@ -915,9 +979,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            General-purpose wood bit for DIY and repair applications.
-          </p>
         </div>
 
         <div class="product__card">
@@ -928,6 +989,9 @@
             alt="Wood drill bit model 6"
             data-images="assets/bit-6.jpeg"
           />
+          <p class="product__desc">
+            Designed for accurate drilling in laminated boards and MDF.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%206"
@@ -948,9 +1012,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Designed for accurate drilling in laminated boards and MDF.
-          </p>
         </div>
 
         <div class="product__card">
@@ -961,6 +1022,9 @@
             alt="Wood drill bit model 7"
             data-images="assets/bit-7.jpeg"
           />
+          <p class="product__desc">
+            Suitable for installing hardware, hinges, and fasteners in wood.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%207"
@@ -981,9 +1045,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Suitable for installing hardware, hinges, and fasteners in wood.
-          </p>
         </div>
 
         <div class="product__card">
@@ -994,6 +1055,9 @@
             alt="Wood drill bit model 8"
             data-images="assets/bit-8.jpeg"
           />
+          <p class="product__desc">
+            Fine tip for small-diameter holes in trims and decorative work.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%208"
@@ -1014,9 +1078,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Fine tip for small-diameter holes in trims and decorative work.
-          </p>
         </div>
 
         <div class="product__card">
@@ -1027,6 +1088,9 @@
             alt="Wood drill bit model 9"
             data-images="assets/bit-9.jpeg"
           />
+          <p class="product__desc">
+            Robust bit for repetitive drilling jobs on site and in workshops.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%209"
@@ -1047,9 +1111,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Robust bit for repetitive drilling jobs on site and in workshops.
-          </p>
         </div>
 
         <div class="product__card">
@@ -1060,6 +1121,9 @@
             alt="Wood drill bit model 10"
             data-images="assets/bit-10.jpeg"
           />
+          <p class="product__desc">
+            Versatile wood bit compatible with most standard power drills.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20Wood%20Drill%20Bit%20Model%2010"
@@ -1080,9 +1144,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Versatile wood bit compatible with most standard power drills.
-          </p>
         </div>
 
         <div class="product__card">
@@ -1093,6 +1154,10 @@
             alt="Wood drill bearing"
             data-images="assets/bearing.jpeg"
           />
+          <p class="product__desc">
+            Durable bearing to support smooth drill rotation and longer tool
+            life.
+          </p>
           <div class="product__buttons">
             <a
               href="https://wa.me/91YOURNUMBER?text=I'm%20interested%20in%20the%20Wood%20Drill%20Bearing"
@@ -1113,10 +1178,6 @@
               ><i class="ri-youtube-fill"></i
             ></a>
           </div>
-          <p class="product__desc">
-            Durable bearing to support smooth drill rotation and longer tool
-            life.
-          </p>
         </div>
       </div>
     </section>
