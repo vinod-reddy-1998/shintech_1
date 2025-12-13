@@ -1,4 +1,8 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
+  // ===== GLOBAL CONFIG =====
+  const WHATSAPP_NUMBER = "919704551800"; // 9704551800
   // -------------------
   // Mobile menu toggle
   // -------------------
@@ -67,22 +71,44 @@ document.addEventListener("DOMContentLoaded", () => {
   // -------------------
   // WhatsApp dynamic buttons
   // -------------------
-  productCards.forEach((card) => {
-    const product = card.getAttribute("data-product");
-    const whatsappBtn = card.querySelector(".btn.whatsapp");
+  // productCards.forEach((card) => {
+  //   const product = card.getAttribute("data-product");
+  //   const whatsappBtn = card.querySelector(".btn.whatsapp");
 
-    if (whatsappBtn) {
-      whatsappBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const message = encodeURIComponent(
-          `Thanks for contacting Shintech! I'm interested in the ${product}.`
-        );
-        const phone = "918977022778"; // Your WhatsApp number
-        const url = `https://wa.me/${phone}?text=${message}`;
-        window.open(url, "_blank");
-      });
-    }
-  });
+  //   if (whatsappBtn) {
+  //     whatsappBtn.addEventListener("click", (e) => {
+  //       e.preventDefault();
+  //       const message = encodeURIComponent(
+  //         `Thanks for contacting Shintech! I'm interested in the ${product}.`
+  //       );
+  //       const phone = "918977022778"; // Your WhatsApp number
+  //       const url = `https://wa.me/${phone}?text=${message}`;
+  //       window.open(url, "_blank");
+  //     });
+  //   }
+  // });
+  productCards.forEach((card) => {
+  const product =
+    card.getAttribute("data-product") ||
+    card.querySelector("h4")?.innerText ||
+    "product";
+
+  const whatsappBtn = card.querySelector(".btn.whatsapp");
+
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const message = encodeURIComponent(
+        `Thanks for contacting Shintech! I'm interested in the ${product}.`
+      );
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+      window.open(url, "_blank");
+    });
+  }
+});
+
 
   // -------------------
   // ScrollReveal animations
